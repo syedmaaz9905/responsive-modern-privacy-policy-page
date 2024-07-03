@@ -191,25 +191,25 @@ header {
     }
 }
 
-/* BODY PRIVACY POLICY CSS */
+/* BODY FAQ CSS */
 
 main {
     padding: 50px;
 }
 
-.navigation-privacypolicy {
+.navigation-faq {
     font-weight: 500;
     font-size: 18px;
     color: #9A9999;
 }
 
-.navigation-privacypolicy a {
+.navigation-faq a {
     text-decoration: none;
     color: #5DBDF9;
     transition: all 0.3s ease-in-out;
 }
 
-.navigation-privacypolicy a:hover {
+.navigation-faq a:hover {
     color: #0056b3;
 }
 
@@ -220,229 +220,154 @@ main {
     margin-top: 30px;
     margin-bottom: 20px;
     color: #3F3F3F;
-}
-
-.content {
     display: flex;
-    gap: 20px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
-.tabs {
+.main-heading-subheading {
+    color: #5DBDF9;
+}
+
+.faq-main-container {
     display: flex;
-    width: 100%;
+    justify-content: center;
 }
 
-.tab-header {
-    width: 300px;
-    border-right: 1px solid #5DBDF9;
+.faq-container {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
 }
 
-.tab-date {
-    padding: 10px;
-}
-
-.tab-item {
-    padding: 10px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-.tab-item.active {
-    background: #5dbdf980;
-    border-right: 2px solid #0056b3;
-    border-top-left-radius: 6px;
-    border-bottom-left-radius: 6px;
-    /* color: #fff; */
-    font-weight: 600;
-}
-
-.tab-content {
-    flex: 1;
-    margin-left: 30px;
-}
-
-.tab-pane {
-    display: none;
-    padding: 20px;
-}
-
-.tab-pane.active {
-    display: block;
-}
-
-.tab-pane-heading {
-    font-weight: 500;
-    font-size: 20px;
-    color: #5F5B5D;
-    margin-bottom: 10px;
-}
-
-.tab-pane-subheading {
-    font-weight: 500;
-    font-size: 18px;
-    color: #5F5B5D;
-    margin-bottom: 10px;
-}
-
-.tab-pane-ptag {
-    font-weight: 400;
-    font-size: 16px;
-    color: #6C6D6D;
-    margin-bottom: 10px;
-}
-
-.tab-pane-ptag-articles {
-    font-weight: 400;
-    font-size: 16px;
-    color: #6C6D6D;
-    margin-bottom: 10px;
-    margin-left: 15px;
-}
-
-
-.tab-pane-ptag-articles a {
-    color: #6C6D6D;
-    transition: 0.3s all ease-in-out;
-}
-
-.tab-pane-ptag-clause {
-    font-weight: 400;
-    font-size: 16px;
-    color: #6C6D6D;
-    margin-bottom: 10px;
-    margin-left: 50px;
-}
-
-.tab-pane-ptag-articles a:hover {
-    color: #202020;
-}
-
-.tab-pane-ptag-last {
-    font-weight: 400;
-    font-size: 16px;
-    color: #6C6D6D;
+.faq-item {
     margin-bottom: 15px;
 }
 
-.tab-pane-list {
-    font-weight: 400;
+.faq-question {
+    width: 100%;
+    padding: 15px;
+    font-size: 22px;
+    font-weight: 500;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: #3F3F3F;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.faq-answer {
+    padding: 0 15px;
+    max-height: 0;
+    overflow: hidden;
+    border-radius: 6px;
+    border-bottom: 1px solid #9A9999;
+    transition: max-height 0.3s ease;
     font-size: 16px;
+}
+
+.faq-answer p {
+    margin: 15px 0;
+}
+
+.faq-question i {
+    color: #5DBDF9;
+    transition: transform 0.3s ease;
+}
+
+.faq-question.active i {
+    transform: rotate(135deg);
+}
+
+.faq-main-more-questions{
+    display: flex;
+    justify-content: center;
+}
+
+.faq-more-questions {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: start;
+    margin-top: 30px;
+    width: 70%;
+}
+
+.faq-more-questions h2 {
+    font-weight: 500;
+    font-size: 22px;
+    color: #3F3F3F;
+}
+
+.faq-more-questions p {
+    font-weight: 500;
+    font-size: 18px;
     color: #6C6D6D;
-    margin-bottom: 10px;
-    margin-left: 30px;
+}
+
+.faq-more-questions p a {
+    text-decoration: underline;
+}
+
+@media (max-width: 1024px) {
+    .main-heading {
+        font-size: 24px;
+    }
+
+    .faq-container {
+        width: 90%;
+    }
+
+    .faq-more-questions {
+        width: 90%;
+    }
+    
 }
 
 @media (max-width: 768px) {
-
     main {
-        padding: 20px;
-    }
-
-    .navigation-privacypolicy {
-        font-size: 16px;
+        padding: 30px;
     }
 
     .main-heading {
         font-size: 20px;
     }
 
-    .tab-header {
-        width: 200px;
+    .faq-container {
+        width: 100%;
     }
 
-    .tab-date {
-        padding: 8px;
-        font-size: 14px;
-    }
-
-    .tab-item {
-        padding: 8px;
-        font-size: 14px;
-    }
-
-    .tab-item.active {
-        font-size: 14px;
-    }
-
-    .tab-content {
-        margin-left: 10px;
-    }
-
-    .tab-pane-heading {
-        font-size: 18px;
-    }
-
-    .tab-pane-subheading {
+    .faq-question {
         font-size: 16px;
     }
 
-    .tab-pane-ptag {
-        font-size: 14px;
+    .faq-answer {
+        font-size: 13px;
     }
 
-    .tab-pane-ptag-articles {
-        font-size: 14px;
+    .faq-more-questions {
+        width: 100%;
     }
 
-
-    .tab-pane-ptag-clause {
-        font-size: 14px;
+    .faq-more-questions h2 {
+        font-size: 18px;
     }
-
-    .tab-pane-ptag-last {
-        font-size: 14px;
-    }
-
-    .tab-pane-list {
+    
+    .faq-more-questions p {
         font-size: 14px;
     }
 }
 
-@media (max-width: 600px) {
-    .tabs {
-        flex-direction: column;
-    }
-
-    .tab-header {
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-        border-right: 0;
-        border-bottom: 2px solid #5DBDF9;
-        text-align: center;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .tab-date {
-        display: none;
-    }
-
-    .tab-item.active {
-        background: #5dbdf980;
-        border-right: 0;
-        border-bottom: 2px solid #0056b3;
-        border-top-left-radius: 6px;
-        border-top-right-radius: 6px;
-        border-bottom-left-radius: 0;
-        font-weight: 600;
-        text-align: center;
-    }
-
-    .tab-pane {
-        padding: 0;
-        padding-top: 20px;
-    }
-}
-
-@media (max-width: 400px) {
-    .tab-header {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .tab-item {
-        width: 100%;
+@media (max-width: 350px) {
+    main {
+        padding: 15px;
     }
 }
 
